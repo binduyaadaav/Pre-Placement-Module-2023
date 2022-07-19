@@ -1,0 +1,18 @@
+class Solution {
+    public void swap(char[] s, int a, int b){
+        char temp = s[a];
+        s[a] = s[b];
+        s[b]=temp;
+    }
+    public void reverseString(char[] s) {
+        //if even length, we reverse all elements
+        //if odd length, middle element stays
+        //so traveral just need to stop at middle
+        // i<length/2 
+        for(int i=0;i<s.length/2;i++){
+            swap(s, i,s.length-1-i);
+        }
+        
+        
+    }
+}
